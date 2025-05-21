@@ -1,124 +1,98 @@
-# 🎫 TicketChain - Système de billetterie décentralisé sur la Blockchain
 
-## 📌 Contexte
+# 🎫 TicketChain – Système de billetterie décentralisé sur la blockchain Ethereum
 
-Le secteur de la billetterie (concerts, événements sportifs, conférences…) est confronté à des problèmes majeurs :
+## 📌 Contexte  
+Le secteur de la billetterie (concerts, événements sportifs, conférences, etc.) fait face à plusieurs problèmes récurrents :  
 
-- Falsification ou duplication de billets
-- Revente abusive ou illégale (scalping)
-- Manque de transparence
-- Frais élevés dus aux intermédiaires
-- Absence de contrôle sur les reventes
+- Falsification ou duplication de billets  
+- Revente illégale ou abusive (scalping)  
+- Manque de transparence sur les transactions  
+- Frais élevés dus aux intermédiaires  
+- Absence de contrôle sur les reventes  
 
-Grâce à la blockchain, nous pouvons construire un **système sécurisé, transparent et décentralisé** pour gérer les tickets.
+🎯 **TicketChain** propose une alternative décentralisée et sécurisée grâce à la blockchain Ethereum.
 
----
+## 🎯 Objectifs du projet  
 
-## 🎯 Objectifs du projet
+TicketChain est un **smart contract Ethereum** permettant :  
 
-TicketChain est un smart contract Ethereum qui permet :
+- La création d’événements par des organisateurs  
+- La génération et mise en vente de billets par les utilisateurs  
+- La réservation de places spécifiques à l’achat  
+- La gestion automatisée des tickets et des paiements  
+- La validation des billets à l’entrée d’un événement  
+- Une interface simple et compatible avec **MetaMask**
 
-- La **création d'événements** par des organisateurs
-- La **création et mise en vente de billets** par tout utilisateur
-- La **sélection d'une place spécifique** lors de l'achat
-- La **gestion automatique des billets et des transactions**
-- La **validation d’un ticket** à l'entrée de l'événement
-- Une interface compatible avec **Metamask** pour les utilisateurs
+## ✅ Pourquoi la blockchain ?
 
----
+| Problème                  | Solution via Blockchain                             |
+|--------------------------|------------------------------------------------------|
+| Falsification de tickets | Chaque ticket est unique, immuable, et traçable     |
+| Revente illégale         | Les transferts sont gérés et enregistrés on-chain   |
+| Manque de traçabilité    | Historique transparent et public                    |
+| Frais d’intermédiaires   | Transactions directes entre utilisateurs            |
+| Attribution de places    | Réservation liée au ticket, sans risque de conflit  |
 
-## ✅ Pourquoi utiliser la blockchain ?
+## 🪑 Réservation de sièges
 
-| Problème | Solution blockchain |
-|---------|---------------------|
-| Falsification de tickets | Chaque ticket est unique, stocké sur la blockchain |
-| Revente illégale | Le contrat contrôle et enregistre chaque transfert |
-| Manque de traçabilité | Historique des ventes transparent et public |
-| Frais d'intermédiaires | Transactions directes entre vendeur et acheteur |
-| Attribution de places | Réservation immuable liée au ticket |
+Chaque billet correspond à une place numérotée (ex. : Rangée A, Siège 3).  
+Lors de l’achat :  
+- L’utilisateur choisit une place encore disponible  
+- Le contrat vérifie sa disponibilité  
+- Une fois achetée, la place devient indisponible  
 
----
-
-## 🪑 Réservation de places spécifiques
-
-Chaque billet est **lié à une place numérotée** (ex: Rangée A, Siège 3). Lors de l'achat :
-
-- L'acheteur peut **choisir une place disponible**
-- Le système vérifie que la place n’est pas déjà réservée
-- Une fois achetée, la place devient **indisponible**
-
-Cela imite parfaitement un système réel de billetterie avec plan de salle.
-
----
+Cela permet de reproduire fidèlement un système de billetterie classique avec plan de salle.
 
 ## 🔧 Fonctionnalités principales
 
-- ✅ Création d’événements avec plan de places
-- ✅ Création et mise en vente de billets
-- ✅ Réservation de sièges uniques
-- ✅ Achat via Metamask (ETH ou testnet)
-- ✅ Revente entre utilisateurs
-- ✅ Validation du ticket à l’entrée
-- ✅ Historique transparent des transactions
-
----
+- ✅ Création d’événements avec plans de places  
+- ✅ Vente de billets avec places numérotées  
+- ✅ Achat de tickets avec **MetaMask (ETH ou testnet)**  
+- ✅ Revente entre utilisateurs  
+- ✅ Validation des tickets à l’entrée via smart contract  
+- ✅ Historique public des transactions  
 
 ## 🛠️ Stack technique
 
-- **Solidity** : Smart contract
-- **Ganache** : Test local
-- **Remix IDE** : Déploiement rapide
-- **Metamask** : Wallet utilisateur
+- **Solidity** – Développement du smart contract  
+- **Ganache** – Environnement local de test  
+- **Remix IDE** – Déploiement et tests rapides  
+- **MetaMask** – Connexion des utilisateurs et paiements  
 
----
+## 💡 Exemple d’utilisation
 
-## 💡 Exemple d'utilisation
+1. 🎤 Un organisateur crée un concert avec 100 places (10 rangées × 10 sièges)  
+2. 👤 Alice crée et met en vente 3 billets (A1, A2, A3)  
+3. 🧑 Bob achète le billet A2 via l’interface et paie en ETH avec MetaMask  
+4. 🔁 Il transfère ensuite son billet à Charlie  
+5. ✅ Charlie présente son ticket à l’entrée ; celui-ci est validé on-chain  
 
-> 🎤 L'organisateur crée un concert avec 100 places (10 rangées x 10 sièges)  
-> 👤 Alice crée 3 tickets pour l'événement (A1, A2, A3) et les met en vente  
-> 🧑 Bob ouvre l’interface, voit les places disponibles, choisit A2, paie avec Metamask  
-> 🔁 Il transfère ensuite son billet à Charlie  
-> ✅ Charlie se présente à l’entrée, et son ticket est validé grâce au smart contract
+## 🧠 Cas d’usage
 
----
-
-## 🧠 Cas d’usage possibles
-
-- Concerts, festivals, conférences
-- Billets de cinéma ou théâtre
-- Événements privés ou exclusifs
-- Systèmes d’invitation basés sur NFT
-
----
+- Concerts, festivals, conférences  
+- Billetterie de cinéma ou théâtre  
+- Événements privés ou sur invitation  
+- Systèmes NFT avec droits d’entrée  
 
 ## 🔐 Sécurité & Transparence
 
-- Toutes les actions sont stockées sur la blockchain
-- Les places sont réservées de manière immuable
-- Aucune fraude ou duplication possible
-- Paiement direct sans intermédiaire
-
----
+- Toutes les actions sont enregistrées sur la blockchain  
+- Les places sont réservées de manière immuable  
+- Zéro risque de fraude, duplication ou survente  
+- Transactions peer-to-peer, sans tiers de confiance  
 
 ## 📦 Fonctionnalités futures
 
-- 🎨 Interface graphique avec plan interactif des places
-- 🧾 Génération de QR Code liés à chaque billet
-- 🎫 Intégration IPFS pour attacher des fichiers au billet (ex: image, vidéo)
-- 🛂 Vérification de l’identité des participants (KYC)
-- 📈 Statistiques de vente pour les organisateurs
-
----
+- 🎨 Interface graphique avec visualisation des sièges  
+- 🧾 QR Code généré pour chaque billet  
+- 🎫 Intégration IPFS (images, vidéos ou données liées au billet)  
+- 🛂 Vérification d’identité (KYC) pour accès restreint  
+- 📈 Statistiques de vente pour les organisateurs  
 
 ## 📚 Projet académique
 
-> Ce projet a été réalisé dans le cadre d’un module universitaire sur la **blockchain et les smart contracts**, pour démontrer l'utilité d’Ethereum dans les systèmes réels.
-
----
+Ce projet a été réalisé dans le cadre d’un module universitaire sur la **blockchain** et les **smart contracts**. Il illustre l’usage d’Ethereum pour résoudre des problématiques concrètes de la vie réelle.
 
 ## 📬 Contact
 
-Pour toute question ou contribution, merci de me contacter sur GitHub ou LinkedIn.
-
----
-
+Pour toute question, retour ou contribution, n'hésitez pas à me contacter via [GitHub](#https://github.com/Kamaal404) ou [LinkedIn](#https://www.linkedin.com/in/kamal-saalaoui-69400b297/).
